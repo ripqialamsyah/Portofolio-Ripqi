@@ -206,36 +206,183 @@ function initializeTestimonialSlider() {
 }
 
 // Contact form submission
+// Enhanced Contact form submission with Gmail integration
 function initializeContactForm() {
     const contactForm = document.getElementById('contactForm');
     
     if (!contactForm) return;
     
-    contactForm.addEventListener('submit', function(e) {
+    contactForm.addEventListener('submit', async function(e) {
         e.preventDefault();
         
         const nameInput = document.getElementById('name');
         const emailInput = document.getElementById('email');
         const subjectInput = document.getElementById('subject');
         const messageInput = document.getElementById('message');
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        
+        // Store original button text
+        const originalButtonText = submitButton.innerHTML;
         
         // Simple validation
         if (!nameInput.value || !emailInput.value || !subjectInput.value || !messageInput.value) {
-            alert('Mohon lengkapi semua kolom!');
+            showAlert('Mohon lengkapi semua kolom!', 'error');
             return;
         }
         
         // Email validation
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(emailInput.value)) {
-            alert('Mohon masukkan alamat email yang valid!');
+            showAlert('Mohon masukkan alamat email yang valid!', 'error');
             return;
         }
         
-        // Form is valid - you would normally send data to server here
-        alert('Pesan Anda telah terkirim! Terima kasih.');
-        contactForm.reset();
+        // Show loading state
+        submitButton.innerHTML = '<span class="spinner"></span> Mengirim...';
+        submitButton.disabled = true;
+        
+        try {
+            // Method 1: Using EmailJS (Recommended)
+            await sendEmailWithEmailJS({
+                name: nameInput.value,
+                email: emailInput.value,
+                subject: subjectInput.value,
+                message: messageInput.value
+            });
+            
+        } catch (error) {
+            console.error('EmailJS failed, trying alternative method:', error);
+            
+            // Method 2: Fallback to mailto (opens email client)
+            sendEmailWithMailto({
+                name: nameInput.value,
+                email: emailInput.value,
+                subject: subjectInput.value,
+                message: messageInput.value
+            });
+        } finally {
+            // Reset button state
+            submitButton.innerHTML = originalButtonText;
+            submitButton.disabled = false;
+        }
     });
+}
+
+// Method 1: EmailJS Integration (requires setup)
+async function sendEmailWithEmailJS(formData) {
+    // You need to sign up at https://www.emailjs.com/ and get these credentials
+    const serviceID = 'service_nzg8q3d'; // Replace with your service ID
+    const templateID = 'template_7bo88d7'; // Replace with your template ID
+    const publicKey = 'GephoRB_sVSlBEUy-'; // Replace with your public key
+    
+    const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+        to_email: 'alamsyahripqi@gmail.com' // Replace with your Gmail address
+    };
+    
+    try {
+        const response = await emailjs.send(serviceID, templateID, templateParams, publicKey);
+        
+        if (response.status === 200) {
+            showAlert('Pesan Anda telah terkirim! Terima kasih.', 'success');
+            document.getElementById('contactForm').reset();
+        } else {
+            throw new Error('EmailJS response not OK');
+        }
+    } catch (error) {
+        console.error('EmailJS Error:', error);
+        throw error; // Re-throw to trigger fallback
+    }
+}
+
+// Method 2: Mailto fallback (opens default email client)
+function sendEmailWithMailto(formData) {
+    const subject = encodeURIComponent(`[Website Contact] ${formData.subject}`);
+    const body = encodeURIComponent(
+        `Nama: ${formData.name}\n` +
+        `Email: ${formData.email}\n` +
+        `Subjek: ${formData.subject}\n\n` +
+        `Pesan:\n${formData.message}\n\n` +
+        `---\n` +
+        `Dikirim dari website pada ${new Date().toLocaleString('id-ID')}`
+    );
+    
+    const mailtoLink = `mailto:alamsyahripqi@gmail.com?subject=${subject}&body=${body}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
+    
+    showAlert('Email client Anda akan terbuka. Silakan kirim email dari aplikasi email Anda.', 'info');
+    document.getElementById('contactForm').reset();
+}
+
+// Method 3: Server-side integration (requires backend)
+async function sendEmailWithServer(formData) {
+    try {
+        const response = await fetch('/api/send-email', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData)
+        });
+        
+        const result = await response.json();
+        
+        if (response.ok) {
+            showAlert('Pesan Anda telah terkirim! Terima kasih.', 'success');
+            document.getElementById('contactForm').reset();
+        } else {
+            throw new Error(result.message || 'Gagal mengirim email');
+        }
+    } catch (error) {
+        console.error('Server Error:', error);
+        throw error;
+    }
+}
+
+// Enhanced alert function with different types
+function showAlert(message, type = 'info') {
+    // Remove existing alerts
+    const existingAlert = document.querySelector('.custom-alert');
+    if (existingAlert) {
+        existingAlert.remove();
+    }
+    
+    // Create alert element
+    const alertDiv = document.createElement('div');
+    alertDiv.className = `custom-alert alert-${type}`;
+    alertDiv.innerHTML = `
+        <div class="alert-content">
+            <span class="alert-icon">${getAlertIcon(type)}</span>
+            <span class="alert-message">${message}</span>
+            <button class="alert-close" onclick="this.parentElement.parentElement.remove()">×</button>
+        </div>
+    `;
+    
+    // Add to page
+    document.body.appendChild(alertDiv);
+    
+    // Auto remove after 5 seconds
+    setTimeout(() => {
+        if (alertDiv.parentElement) {
+            alertDiv.remove();
+        }
+    }, 5000);
+}
+
+// Get icon for alert type
+function getAlertIcon(type) {
+    const icons = {
+        success: '✓',
+        error: '⚠',
+        info: 'ℹ',
+        warning: '⚡'
+    };
+    return icons[type] || icons.info;
 }
 
 // Back to top button
