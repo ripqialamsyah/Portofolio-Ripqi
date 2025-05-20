@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header & Navigation -->
+    <header>
+      <div class="container">
+        <div class="logo">
+          <h1>My<span>Portfolio</span></h1>
+        </div>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#home" class="active">Beranda</a></li>
+            <li><a href="#about">Tentang</a></li>
+            <li><a href="#services">Layanan</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Kontak</a></li>
+          </ul>
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h4>Selamat Datang di Portfolio Saya</h4>
+          <h1>Saya <span class="typed-text"></span></h1>
+          <p>
+            Saya membantu bisnis dan individu menciptakan kehadiran online yang
+            profesional dan efektif.
+          </p>
+          <div class="hero-buttons">
+            <a href="#portfolio" class="btn primary-btn">Lihat Karya</a>
+            <a href="#contact" class="btn secondary-btn">Hubungi Saya</a>
+          </div>
+          <div class="social-icons">
+            <a href="https://www.linkedin.com/in/your-linkedin-profile"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/ripqialamsyah"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/alamsyahripqi_"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="assets/iqiw.jpg" alt="Profile Picture" />
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="section-header">
+          <h2>Tentang Saya</h2>
+          <div class="separator"></div>
+          <p>
+            Kenali saya lebih dekat dan bagaimana saya dapat membantu proyek
+            Anda
+          </p>
+        </div>
+        <div class="about-content">
+          <div class="about-image">
+            <img src="assets/iqiw.jpg" alt="About Me" />
+          </div>
+          <div class="about-text">
+            <h3>Profesional Digital dengan <span>1+ Tahun Pengalaman</span></h3>
+            <p>
+              Saya adalah seorang mahasiswa aktif di Universitas Pamulang jurusan Teknik Informatika
+              dengan kreatif yang berdedikasi untuk memberikan
+              solusi digital. Dengan lebih dari 1 tahun pengalaman di industri,
+              saya telah mengembangkan berbagai keterampilan yang memungkinkan
+              saya memberikan hasil luar biasa untuk klien saya.
+            </p>
+            <p>
+              Saya percaya pada pendekatan kolaboratif untuk setiap proyek,
+              bekerja sama dengan klien untuk memahami kebutuhan unik mereka dan
+              menciptakan solusi yang sesuai.
+            </p>
+
+            <div class="skills">
+              <div class="skill">
+                <div class="skill-name">UI/UX Design</div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 85%"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-name">Web Development</div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 75%"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-name">Digital Marketing</div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 50%"></div>
+                </div>
+              </div>
+            </div>
+
+            <a href="#" class="btn primary-btn">Download CV</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+      <div class="container">
+        <div class="section-header">
+          <h2>Layanan Saya</h2>
+          <div class="separator"></div>
+          <p>
+            Beberapa layanan khusus yang saya tawarkan untuk membantu bisnis
+            Anda berkembang
+          </p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <h3>Web Development</h3>
+            <p>
+              Membangun website responsif yang menarik dan fungsional dengan
+              fokus pada pengalaman pengguna yang optimal.
+            </p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-palette"></i>
+            </div>
+            <h3>UI/UX Design</h3>
+            <p>
+              Menciptakan antarmuka yang intuitif dan menarik yang meningkatkan
+              pengalaman pengguna dan konversi.
+            </p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-bullhorn"></i>
+            </div>
+            <h3>Digital Marketing</h3>
+            <p>
+              Strategi pemasaran digital komprehensif untuk meningkatkan brand
+              awareness dan pertumbuhan bisnis.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+        <div class="section-header">
+          <h2>Portfolio Saya</h2>
+          <div class="separator"></div>
+          <p>Beberapa proyek terbaik yang telah saya kerjakan</p>
+        </div>
+        <div class="portfolio-filter">
+          <button class="filter-btn active" data-filter="all">Semua</button>
+          <button class="filter-btn" data-filter="web">Web</button>
+          <button class="filter-btn" data-filter="design">Design</button>
+          <button class="filter-btn" data-filter="marketing">Marketing</button>
+        </div>
+        <div class="portfolio-grid">
+          <div class="portfolio-item" data-category="web">
+            <div class="portfolio-img">
+              <img src="assets/web sedulur.png" alt="Portfolio Item" />
+            </div>
+            <div class="portfolio-info">
+              <h3>Open Trip Website</h3>
+              <p>Web Development</p>
+              <a href="Web Sedulur/index.html" class="portfolio-link"><i class="fas fa-link"></i></a>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="marketing">
+            <div class="portfolio-img">
+              <img src="/api/placeholder/400/300" alt="Portfolio Item" />
+            </div>
+            <div class="portfolio-info">
+              <h3>Fitness App</h3>
+              <p>Mobile Development</p>
+              <a href="#" class="portfolio-link"><i class="fas fa-link"></i></a>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="design">
+            <div class="portfolio-img">
+              <img src="assets/uiux.png" alt="Portfolio Item" />
+            </div>
+            <div class="portfolio-info">
+              <h3>Brand Identity</h3>
+              <p>UI/UX Design</p>
+              <a href="Dashboard/index.html" class="portfolio-link"><i class="fas fa-link"></i></a>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="web">
+            <div class="portfolio-img">
+              <img src="/api/placeholder/400/300" alt="Portfolio Item" />
+            </div>
+            <div class="portfolio-info">
+              <h3>Corporate Website</h3>
+              <p>Web Development</p>
+              <a href="#" class="portfolio-link"><i class="fas fa-link"></i></a>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="marketing">
+            <div class="portfolio-img">
+              <img src="/api/placeholder/400/300" alt="Portfolio Item" />
+            </div>
+            <div class="portfolio-info">
+              <h3>Food Delivery App</h3>
+              <p>Mobile Development</p>
+              <a href="#" class="portfolio-link"><i class="fas fa-link"></i></a>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="design">
+            <div class="portfolio-img">
+              <img src="/api/placeholder/400/300" alt="Portfolio Item" />
+            </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-header">
+          <h2>Hubungi Saya</h2>
+          <div class="separator"></div>
+          <p>Tertarik bekerja sama? Mari diskusikan proyek Anda</p>
+        </div>
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-details">
+                <h3>Lokasi</h3>
+                <p>Bogor, Indonesia</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-details">
+                <h3>Email</h3>
+                <p>alamsyahripqi@gmail.com</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <div class="contact-details">
+                <h3>Telepon</h3>
+                <p>+62 895 3667 94513</p>
+              </div>
+            </div>
+            <div class="contact-social">
+              <h3>Temukan Saya</h3>
+              <div class="social-links">
+                <a href="https://www.linkedin.com/in/your-linkedin-profile"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/ripqialamsyah"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/alamsyahripqi_"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form">
+            <form id="contactForm">
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Nama Lengkap"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  placeholder="Subjek"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Pesan"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn primary-btn">Kirim Pesan</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <h2>My<span>Portfolio</span></h2>
+            <p>Solusi digital profesional untuk kebutuhan online Anda.</p>
+          </div>
+          <div class="footer-links">
+            <h3>Navigasi</h3>
+            <ul>
+              <li><a href="#home">Beranda</a></li>
+              <li><a href="#about">Tentang</a></li>
+              <li><a href="#services">Layanan</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#contact">Kontak</a></li>
+            </ul>
+          </div>
+          <div class="footer-services">
+            <h3>Layanan</h3>
+            <ul>
+              <li><a href="#portfolio">Web Development</a></li>
+              <li><a href="#portfolio">UI/UX Design</a></li>
+              <li><a href="#portfolio">Digital Marketing</a></li>
+            </ul>
+          </div>
+          <div class="footer-newsletter">
+            <h3>Newsletter</h3>
+            <p>Berlangganan untuk mendapatkan info terbaru.</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Email Anda" />
+              <button type="submit"><i class="fas fa-paper-plane"></i></button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 MyPortfolio.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+  </body>
+</html>
