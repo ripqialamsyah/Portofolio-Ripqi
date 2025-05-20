@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alam Elektronik</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="header-top">
+        <div class="logo">Alam Elektronik</div>
+        <div class="search-bar">
+          <form class="search-form">
+            <input type="text" placeholder="Cari produk..." />
+            <button type="submit">Cari</button>
+          </form>
+        </div>
+        <div class="user-actions">
+          <div class="cart-icon" id="cartIcon">
+            <i>🛒</i>
+            <span class="cart-count">0</span>
+          </div>
+          <div class="user-icon" id="userIcon">
+            <i>👤</i>
+          </div>
+        </div>
+      </div>
+      <nav>
+        <a href="#" class="active">Beranda</a>
+        <a href="#">Kategori</a>
+        <a href="#">Promo</a>
+        <a href="#">Produk Terbaru</a>
+        <a href="#">Populer</a>
+        <a href="#">Bantuan</a>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Banner -->
+      <div class="banner">
+        <div class="banner-content">
+          <h1>Belanja Lebih Mudah</h1>
+          <p>
+            Temukan berbagai produk berkualitas dengan harga terbaik hanya di
+            Alam Elektronik.
+          </p>
+          <a href="#products" class="btn">Belanja Sekarang</a>
+        </div>
+      </div>
+
+      <!-- Categories -->
+      <section class="categories">
+        <div class="category">
+          <div class="category-image">📱</div>
+          <h3>Elektronik</h3>
+        </div>
+        <div class="category">
+          <div class="category-image">👕</div>
+          <h3>Fashion</h3>
+        </div>
+        <div class="category">
+          <div class="category-image">🏠</div>
+          <h3>Rumah Tangga</h3>
+        </div>
+        <div class="category">
+          <div class="category-image">🍔</div>
+          <h3>Makanan</h3>
+        </div>
+        <div class="category">
+          <div class="category-image">🏥</div>
+          <h3>Kesehatan</h3>
+        </div>
+        <div class="category">
+          <div class="category-image">🎮</div>
+          <h3>Hobi</h3>
+        </div>
+      </section>
+
+      <!-- Featured Products -->
+      <section id="products">
+        <h2 class="section-title">Produk Unggulan</h2>
+        <div class="products">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="/Dashboard/aseets/smartphone.jpeg" alt="Smartphone XYZ" />
+            </div>
+            <div class="product-info">
+              <span class="product-category">Elektronik</span>
+              <h3 class="product-title">Smartphone XYZ Pro Max</h3>
+              <div class="product-price">Rp 5.999.000</div>
+              <div class="product-rating">
+                <div class="rating-stars">★★★★☆</div>
+                <span class="rating-count">(120)</span>
+              </div>
+              <div class="product-actions">
+                <button
+                  class="add-to-cart"
+                  data-id="1"
+                  data-name="Smartphone XYZ Pro Max"
+                  data-price="5999000"
+                >
+                  Tambah ke Keranjang
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img src="/Dashboard/aseets/laptop.jpeg" alt="Laptop ABC" />
+            </div>
+            <div class="product-info">
+              <span class="product-category">Elektronik</span>
+              <h3 class="product-title">Laptop ABC Ultrabook</h3>
+              <div class="product-price">Rp 12.500.000</div>
+              <div class="product-rating">
+                <div class="rating-stars">★★★★★</div>
+                <span class="rating-count">(85)</span>
+              </div>
+              <div class="product-actions">
+                <button
+                  class="add-to-cart"
+                  data-id="2"
+                  data-name="Laptop ABC Ultrabook"
+                  data-price="12500000"
+                >
+                  Tambah ke Keranjang
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img src="/Dashboard/aseets/sepatu.jpeg" alt="Sepatu Lari" />
+            </div>
+            <div class="product-info">
+              <span class="product-category">Fashion</span>
+              <h3 class="product-title">Sepatu Lari Premium</h3>
+              <div class="product-price">Rp 899.000</div>
+              <div class="product-rating">
+                <div class="rating-stars">★★★★☆</div>
+                <span class="rating-count">(210)</span>
+              </div>
+              <div class="product-actions">
+                <button
+                  class="add-to-cart"
+                  data-id="3"
+                  data-name="Sepatu Lari Premium"
+                  data-price="899000"
+                >
+                  Tambah ke Keranjang
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img src="/Dashboard/aseets/smart watch.jpeg" alt="Smart Watch" />
+            </div>
+            <div class="product-info">
+              <span class="product-category">Elektronik</span>
+              <h3 class="product-title">Smart Watch Series 5</h3>
+              <div class="product-price">Rp 2.499.000</div>
+              <div class="product-rating">
+                <div class="rating-stars">★★★★☆</div>
+                <span class="rating-count">(95)</span>
+              </div>
+              <div class="product-actions">
+                <button
+                  class="add-to-cart"
+                  data-id="4"
+                  data-name="Smart Watch Series 5"
+                  data-price="2499000"
+                >
+                  Tambah ke Keranjang
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img src="/Dashboard/aseets/blender.jpeg" alt="Blender Multifungsi" />
+            </div>
+            <div class="product-info">
+              <span class="product-category">Rumah Tangga</span>
+              <h3 class="product-title">Blender Multifungsi</h3>
+              <div class="product-price">Rp 599.000</div>
+              <div class="product-rating">
+                <div class="rating-stars">★★★★★</div>
+                <span class="rating-count">(152)</span>
+              </div>
+              <div class="product-actions">
+                <button
+                  class="add-to-cart"
+                  data-id="5"
+                  data-name="Blender Multifungsi"
+                  data-price="599000"
+                >
+                  Tambah ke Keranjang
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img src="/Dashboard/aseets/tas.jpeg" alt="Tas Ransel" />
+            </div>
+            <div class="product-info">
+              <span class="product-category">Fashion</span>
+              <h3 class="product-title">Tas Ransel Travel</h3>
+              <div class="product-price">Rp 450.000</div>
+              <div class="product-rating">
+                <div class="rating-stars">★★★★☆</div>
+                <span class="rating-count">(78)</span>
+              </div>
+              <div class="product-actions">
+                <button
+                  class="add-to-cart"
+                  data-id="6"
+                  data-name="Tas Ransel Travel"
+                  data-price="450000"
+                >
+                  Tambah ke Keranjang
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img src="/Dashboard/aseets/tablet.jpeg" alt="Headphone" />
+            </div>
+            <div class="product-info">
+              <span class="product-category">Elektronik</span>
+              <h3 class="product-title">Tablet</h3>
+              <div class="product-price">Rp 1.299.000</div>
+              <div class="product-rating">
+                <div class="rating-stars">★★★★★</div>
+                <span class="rating-count">(183)</span>
+              </div>
+              <div class="product-actions">
+                <button
+                  class="add-to-cart"
+                  data-id="7"
+                  data-name="Headphone Wireless"
+                  data-price="1299000"
+                >
+                  Tambah ke Keranjang
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img src="/Dashboard/aseets/kamera.jpeg" alt="Kamera Digital" />
+            </div>
+            <div class="product-info">
+              <span class="product-category">Elektronik</span>
+              <h3 class="product-title">Kamera Digital Pro</h3>
+              <div class="product-price">Rp 7.999.000</div>
+              <div class="product-rating">
+                <div class="rating-stars">★★★★☆</div>
+                <span class="rating-count">(64)</span>
+              </div>
+              <div class="product-actions">
+                <button
+                  class="add-to-cart"
+                  data-id="8"
+                  data-name="Kamera Digital Pro"
+                  data-price="7999000"
+                >
+                  Tambah ke Keranjang
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- New Arrivals -->
+      <section>
+        <h2 class="section-title">Produk Terbaru</h2>
+        <div class="products">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="/Dashboard/aseets/speaker.jpeg" alt="Speaker Bluetooth" />
+            </div>
+            <div class="product-info">
+              <span class="product-category">Elektronik</span>
+              <h3 class="product-title">Speaker Bluetooth Mini</h3>
+              <div class="product-price">Rp 399.000</div>
+              <div class="product-rating">
+                <div class="rating-stars">★★★★☆</div>
+                <span class="rating-count">(42)</span>
+              </div>
+              <div class="product-actions">
+                <button
+                  class="add-to-cart"
+                  data-id="9"
+                  data-name="Speaker Bluetooth Mini"
+                  data-price="399000"
+                >
+                  Tambah ke Keranjang
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img src="/Dashboard/aseets/rice cooker.jpeg" alt="Rice Cooker Digital" />
+            </div>
+            <div class="product-info">
+              <span class="product-category">Rumah Tangga</span>
+              <h3 class="product-title">Rice Cooker Digital</h3>
+              <div class="product-price">Rp 799.000</div>
+              <div class="product-rating">
+                <div class="rating-stars">★★★★★</div>
+                <span class="rating-count">(37)</span>
+              </div>
+              <div class="product-actions">
+                <button
+                  class="add-to-cart"
+                  data-id="10"
+                  data-name="Rice Cooker Digital"
+                  data-price="799000"
+                >
+                  Tambah ke Keranjang
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img src="/Dashboard/aseets/jam.jpeg" alt="Jam Tangan" />
+            </div>
+            <div class="product-info">
+              <span class="product-category">Fashion</span>
+              <h3 class="product-title">Jam Tangan Analog</h3>
+              <div class="product-price">Rp 750.000</div>
+              <div class="product-rating">
+                <div class="rating-stars">★★★★☆</div>
+                <span class="rating-count">(56)</span>
+              </div>
+              <div class="product-actions">
+                <button
+                  class="add-to-cart"
+                  data-id="11"
+                  data-name="Jam Tangan Analog"
+                  data-price="750000"
+                >
+                  Tambah ke Keranjang
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img src="/Dashboard/aseets/power bank.jpeg" alt="Power Bank" />
+            </div>
+            <div class="product-info">
+              <span class="product-category">Elektronik</span>
+              <h3 class="product-title">Power Bank 20000mAh</h3>
+              <div class="product-price">Rp 499.000</div>
+              <div class="product-rating">
+                <div class="rating-stars">★★★★★</div>
+                <span class="rating-count">(91)</span>
+              </div>
+              <div class="product-actions">
+                <button
+                  class="add-to-cart"
+                  data-id="12"
+                  data-name="Power Bank 20000mAh"
+                  data-price="499000"
+                >
+                  Tambah ke Keranjang
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section class="features">
+        <div class="feature">
+          <div class="feature-icon">🚚</div>
+          <h3>Pengiriman Cepat</h3>
+          <p>Pesanan dikirim dalam 24 jam setelah pembayaran dikonfirmasi.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">💰</div>
+          <h3>Garansi Uang Kembali</h3>
+          <p>
+            Jika produk tidak sesuai, dapatkan uang Anda kembali dalam 7 hari.
+          </p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🔒</div>
+          <h3>Pembayaran Aman</h3>
+          <p>Transaksi Anda dilindungi dengan enkripsi SSL 256-bit.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">📞</div>
+          <h3>Dukungan 24/7</h3>
+          <p>Tim layanan pelanggan kami siap membantu Anda kapan saja.</p>
+        </div>
+      </section>
+
+      <!-- Newsletter -->
+      <section class="newsletter">
+        <h2>Dapatkan Update Terbaru</h2>
+        <p>
+          Berlangganan newsletter kami untuk mendapatkan informasi terbaru
+          tentang produk dan promosi.
+        </p>
+        <form class="newsletter-form">
+          <input
+            type="email"
+            class="newsletter-input"
+            placeholder="Alamat Email Anda"
+            required
+          />
+          <button type="submit" class="newsletter-btn">Berlangganan</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>TokoKita</h3>
+          <p>
+            TokoKita adalah platform e-commerce terpercaya yang menyediakan
+            berbagai produk berkualitas dengan harga terbaik.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-link">f</a>
+            <a href="#" class="social-link">t</a>
+            <a href="#" class="social-link">in</a>
+            <a href="#" class="social-link">ig</a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>Kategori</h3>
+          <ul class="footer-links">
+            <li><a href="#">Elektronik</a></li>
+            <li><a href="#">Fashion</a></li>
+            <li><a href="#">Rumah Tangga</a></li>
+            <li><a href="#">Makanan</a></li>
+            <li><a href="#">Kesehatan</a></li>
+            <li><a href="#">Hobi</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Informasi</h3>
+          <ul class="footer-links">
+            <li><a href="#">Tentang Kami</a></li>
+            <li><a href="#">Kebijakan Privasi</a></li>
+            <li><a href="#">Syarat & Ketentuan</a></li>
+            <li><a href="#">Program Afiliasi</a></li>
+            <li><a href="#">Karir</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Layanan Pelanggan</h3>
+          <ul class="footer-links">
+            <li><a href="#">Pusat Bantuan</a></li>
+            <li><a href="#">Cara Pembelian</a></li>
+            <li><a href="#">Pengiriman</a></li>
+            <li><a href="#">Pembayaran</a></li>
+            <li><a href="#">Pengembalian & Refund</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Kontak</h3>
+          <div class="contact-info">
+            <p><i>📍</i> Jl. Contoh No. 123, Bogor</p>
+            <p><i>📞</i> +62 21 1234 5678</p>
+            <p><i>✉️</i> info@alamelektronik.com</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2025 Alam Elaktronik.
+      </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div class="modal" id="cartModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Keranjang Belanja</h3>
+          <button class="close-modal" id="closeCartModal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="cart-items" id="cartItems">
+            <!-- Cart items will be populated by JavaScript -->
+          </div>
+          <div class="cart-summary">
+            <div class="summary-row">
+              <span>Subtotal:</span>
+              <span id="subtotal">Rp 0</span>
+            </div>
+            <div class="summary-row">
+              <span>Biaya Pengiriman:</span>
+              <span id="shipping">Rp 0</span>
+            </div>
+            <div class="summary-row">
+              <span>Pajak (10%):</span>
+              <span id="tax">Rp 0</span>
+            </div>
+            <div class="summary-row summary-total">
+              <span>Total:</span>
+              <span id="total">Rp 0</span>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="continue-shopping" id="continueShopping">
+            Lanjutkan Belanja
+          </button>
+          <button class="checkout-btn" id="checkoutBtn">Checkout</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Masuk</h3>
+          <button class="close-modal" id="closeLoginModal">&times;</button>
+        </div>
+        <div class="login-section">
+          <form id="loginForm">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" required />
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" id="password" required />
+            </div>
+            <div class="form-options">
+              <label class="remember-me">
+                <input type="checkbox" /> Ingat Saya
+              </label>
+              <a href="#">Lupa Password?</a>
+            </div>
+            <button type="submit" class="login-btn">Masuk</button>
+          </form>
+          <div class="divider">atau</div>
+          <div class="social-login">
+            <button class="social-btn">
+              <span>Google</span>
+            </button>
+            <button class="social-btn">
+              <span>Facebook</span>
+            </button>
+          </div>
+          <div class="signup-link">
+            Belum punya akun? <a href="#">Daftar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="modal" id="checkoutModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Checkout</h3>
+          <button class="close-modal" id="closeCheckoutModal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <form class="checkout-form" id="checkoutForm">
+            <h4>Informasi Pengiriman</h4>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">Nama Depan</label>
+                <input type="text" id="firstName" required />
+              </div>
+              <div class="form-group">
+                <label for="lastName">Nama Belakang</label>
+                <input type="text" id="lastName" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="address">Alamat</label>
+              <input type="text" id="address" required />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="city">Kota</label>
+                <input type="text" id="city" required />
+              </div>
+              <div class="form-group">
+                <label for="postalCode">Kode Pos</label>
+                <input type="text" id="postalCode" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="phone">Nomor Telepon</label>
+              <input type="tel" id="phone" required />
+            </div>
+
+            <h4>Metode Pembayaran</h4>
+            <div class="payment-methods">
+              <div class="payment-method">
+                <input
+                  type="radio"
+                  id="creditCard"
+                  name="paymentMethod"
+                  value="creditCard"
+                  checked
+                />
+                <label for="creditCard">Kartu Kredit/Debit</label>
+              </div>
+              <div class="payment-method">
+                <input
+                  type="radio"
+                  id="bankTransfer"
+                  name="paymentMethod"
+                  value="bankTransfer"
+                />
+                <label for="bankTransfer">Transfer Bank</label>
+              </div>
+              <div class="payment-method">
+                <input
+                  type="radio"
+                  id="ewallet"
+                  name="paymentMethod"
+                  value="ewallet"
+                />
+                <label for="ewallet">E-Wallet</label>
+              </div>
+            </div>
+
+            <div class="order-summary">
+              <h4>Ringkasan Pesanan</h4>
+              <div class="order-items" id="orderItems">
+                <!-- Order items will be populated by JavaScript -->
+              </div>
+              <div class="summary-row">
+                <span>Subtotal:</span>
+                <span id="checkoutSubtotal">Rp 0</span>
+              </div>
+              <div class="summary-row">
+                <span>Biaya Pengiriman:</span>
+                <span id="checkoutShipping">Rp 0</span>
+              </div>
+              <div class="summary-row">
+                <span>Pajak (10%):</span>
+                <span id="checkoutTax">Rp 0</span>
+              </div>
+              <div class="summary-row summary-total">
+                <span>Total:</span>
+                <span id="checkoutTotal">Rp 0</span>
+              </div>
+            </div>
+
+            <button type="submit" class="place-order-btn">
+              Proses Pesanan
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Alert -->
+    <div class="alert" id="alert" style="display: none">
+      Produk berhasil ditambahkan ke keranjang!
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal" id="registerModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Daftar Akun Baru</h3>
+          <button class="close-modal" id="closeRegisterModal">&times;</button>
+        </div>
+        <div class="login-section">
+          <form id="registerForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="regFirstName">Nama Depan</label>
+                <input type="text" id="regFirstName" required />
+              </div>
+              <div class="form-group">
+                <label for="regLastName">Nama Belakang</label>
+                <input type="text" id="regLastName" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="regEmail">Email</label>
+              <input type="email" id="regEmail" required />
+            </div>
+            <div class="form-group">
+              <label for="regPassword">Password</label>
+              <input type="password" id="regPassword" required />
+            </div>
+            <div class="form-group">
+              <label for="regConfirmPassword">Konfirmasi Password</label>
+              <input type="password" id="regConfirmPassword" required />
+            </div>
+            <div class="form-options">
+              <label class="agree-terms">
+                <input type="checkbox" required /> Saya setuju dengan
+                <a href="#">Syarat & Ketentuan</a>
+              </label>
+            </div>
+            <button type="submit" class="register-btn">Daftar</button>
+          </form>
+          <div class="divider">atau</div>
+          <div class="social-login">
+            <button class="social-btn">
+              <span>Google</span>
+            </button>
+            <button class="social-btn">
+              <span>Facebook</span>
+            </button>
+          </div>
+          <div class="login-link">
+            Sudah punya akun? <a href="#" id="goToLogin">Masuk</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product Details Modal -->
+    <div class="modal" id="productDetailsModal">
+      <div class="modal-content product-details-content">
+        <div class="modal-header">
+          <h3 id="modalProductTitle">Detail Produk</h3>
+          <button class="close-modal" id="closeProductDetailsModal">
+            &times;
+          </button>
+        </div>
+        <div class="modal-body product-details-body">
+          <div class="product-details-grid">
+            <div class="product-details-image">
+              <img
+                id="modalProductImage"
+                src="/api/placeholder/400/300"
+                alt="Product Image"
+              />
+              <div class="product-thumbnails">
+                <img
+                  src="/api/placeholder/80/80"
+                  alt="Thumbnail 1"
+                  class="product-thumbnail active"
+                />
+                <img
+                  src="/api/placeholder/80/80"
+                  alt="Thumbnail 2"
+                  class="product-thumbnail"
+                />
+                <img
+                  src="/api/placeholder/80/80"
+                  alt="Thumbnail 3"
+                  class="product-thumbnail"
+                />
+                <img
+                  src="/api/placeholder/80/80"
+                  alt="Thumbnail 4"
+                  class="product-thumbnail"
+                />
+              </div>
+            </div>
+            <div class="product-details-info">
+              <h2 id="modalProductName">Nama Produk</h2>
+              <div class="product-rating">
+                <div class="rating-stars" id="modalProductRating">★★★★☆</div>
+                <span class="rating-count" id="modalProductRatingCount"
+                  >(120)</span
+                >
+              </div>
+              <div class="product-price" id="modalProductPrice">Rp 0</div>
+              <div class="product-description" id="modalProductDescription">
+                <p>Deskripsi produk akan ditampilkan di sini.</p>
+              </div>
+              <div class="product-actions">
+                <button
+                  class="add-to-cart"
+                  id="modalAddToCart"
+                  data-id=""
+                  data-name=""
+                  data-price=""
+                >
+                  Tambah ke Keranjang
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
