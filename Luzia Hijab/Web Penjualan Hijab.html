@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luzia Hijab - Koleksi Hijab Premium</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+      <div class="loader-content">
+        <div class="spinner"></div>
+        <h3>Loading Luzia Hijab...</h3>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header id="header">
+      <div class="header-container">
+        <div class="logo">
+          <img src="assets/luzia hijab.png" alt="Luzia Hijab Logo" />
+          <h1>Luzia Hijab</h1>
+        </div>
+
+        <nav id="nav-menu">
+          <ul>
+            <li><a href="#home" class="nav-link active">Beranda</a></li>
+            <li><a href="#products" class="nav-link">Produk</a></li>
+            <li><a href="#collection" class="nav-link">Koleksi</a></li>
+            <li><a href="#testimonials" class="nav-link">Testimoni</a></li>
+            <li><a href="#contact" class="nav-link">Kontak</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <button class="search-toggle" id="search-toggle">
+            <i class="fas fa-search"></i>
+          </button>
+          <button class="cart-toggle" id="cart-toggle">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-badge" id="cart-badge">0</span>
+          </button>
+        </div>
+
+        <button class="menu-toggle" id="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Search Bar -->
+    <div class="search-bar" id="search-bar">
+      <div class="search-container">
+        <button class="search-close" id="search-close">
+          <i class="fas fa-times"></i>
+        </button>
+        <input
+          type="text"
+          placeholder="Cari produk hijab..."
+          id="search-input"
+        />
+        <div class="search-results" id="search-results"></div>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="floating-elements">
+        <div class="floating-element">
+          <i class="fas fa-star" style="font-size: 2rem"></i>
+        </div>
+        <div class="floating-element">
+          <i class="fas fa-heart" style="font-size: 1.5rem"></i>
+        </div>
+        <div class="floating-element">
+          <i class="fas fa-gem" style="font-size: 2.5rem"></i>
+        </div>
+      </div>
+
+      <div class="hero-content">
+        <h1>Koleksi Hijab Premium Terbaru</h1>
+        <p>
+          Temukan gaya hijab yang sempurna untuk setiap momen spesial Anda
+          dengan kualitas terbaik dan desain terkini
+        </p>
+        <div class="hero-buttons">
+          <a href="#products" class="btn btn-primary">
+            <i class="fas fa-shopping-bag"></i>
+            Belanja Sekarang
+          </a>
+          <a href="#collection" class="btn btn-outline">
+            <i class="fas fa-play"></i>
+            Lihat Koleksi
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+      <div class="stats-container">
+        <div class="stat-item fade-in">
+          <div class="stat-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <div class="stat-number" data-target="15000">0</div>
+          <div class="stat-label">Pelanggan Puas</div>
+        </div>
+        <div class="stat-item fade-in">
+          <div class="stat-icon">
+            <i class="fas fa-box"></i>
+          </div>
+          <div class="stat-number" data-target="500">0</div>
+          <div class="stat-label">Produk Berkualitas</div>
+        </div>
+        <div class="stat-item fade-in">
+          <div class="stat-icon">
+            <i class="fas fa-shipping-fast"></i>
+          </div>
+          <div class="stat-number" data-target="50">0</div>
+          <div class="stat-label">Kota Pengiriman</div>
+        </div>
+        <div class="stat-item fade-in">
+          <div class="stat-icon">
+            <i class="fas fa-award"></i>
+          </div>
+          <div class="stat-number" data-target="5">0</div>
+          <div class="stat-label">Tahun Pengalaman</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+      <div class="section-header fade-in">
+        <h2 class="section-title">Produk Unggulan Kami</h2>
+        <p class="section-subtitle">
+          Pilihan hijab terbaik dengan berbagai model dan warna yang trendy
+        </p>
+      </div>
+
+      <div class="product-filter fade-in">
+        <button class="filter-btn active" data-filter="all">Semua</button>
+        <button class="filter-btn" data-filter="segi-empat">Segi Empat</button>
+        <button class="filter-btn" data-filter="pashmina">Pashmina</button>
+        <button class="filter-btn" data-filter="instan">Instan</button>
+        <button class="filter-btn" data-filter="sport">Sport</button>
+      </div>
+
+      <div class="product-grid" id="product-grid">
+        <!-- Products will be dynamically generated -->
+      </div>
+    </section>
+
+    <!-- Collection Section -->
+    <section id="collection" class="collection">
+      <div class="collection-content fade-in">
+        <h2>Koleksi Eksklusif Ramadan 2024</h2>
+        <p>
+          Sambut bulan suci dengan koleksi hijab eksklusif yang dirancang khusus
+          untuk momen-momen istimewa Anda
+        </p>
+        <a href="#products" class="btn btn-outline">
+          <i class="fas fa-eye"></i>
+          Lihat Koleksi
+        </a>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+      <div class="section-header fade-in">
+        <h2 class="section-title">Dapatkan Update Terbaru</h2>
+        <p class="section-subtitle">
+          Berlangganan newsletter kami untuk mendapatkan promo dan koleksi
+          terbaru
+        </p>
+      </div>
+      <form class="newsletter-form fade-in" id="newsletter-form">
+        <input type="email" placeholder="Masukkan email Anda" required />
+        <button type="submit">
+          <i class="fas fa-paper-plane"></i>
+          Berlangganan
+        </button>
+      </form>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+      <div class="section-header fade-in">
+        <h2 class="section-title">Apa Kata Pelanggan Kami</h2>
+        <p class="section-subtitle">
+          Testimoni nyata dari pelanggan yang puas dengan produk kami
+        </p>
+      </div>
+
+      <div class="testimonial-slider fade-in">
+        <div class="testimonial-track" id="testimonial-track">
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <img
+                src="/api/placeholder/80/80"
+                alt="Testimoni"
+                class="testimonial-avatar"
+              />
+              <p class="testimonial-text">
+                "Hijab dari Luzia sangat berkualitas dan nyaman dipakai.
+                Warnanya juga tidak mudah pudar!"
+              </p>
+              <h4 class="testimonial-author">- Siti Aminah</h4>
+            </div>
+          </div>
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <img
+                src="/api/placeholder/80/80"
+                alt="Testimoni"
+                class="testimonial-avatar"
+              />
+              <p class="testimonial-text">
+                "Pelayanan sangat memuaskan dan pengiriman cepat. Pasti akan
+                order lagi!"
+              </p>
+              <h4 class="testimonial-author">- Fatimah Zahra</h4>
+            </div>
+          </div>
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <img
+                src="/api/placeholder/80/80"
+                alt="Testimoni"
+                class="testimonial-avatar"
+              />
+              <p class="testimonial-text">
+                "Designnya cantik-cantik dan harganya terjangkau. Recommended
+                banget!"
+              </p>
+              <h4 class="testimonial-author">- Aisha Rahman</h4>
+            </div>
+          </div>
+        </div>
+        <div class="slider-controls">
+          <button class="slider-btn" id="prev-btn">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="slider-btn" id="next-btn">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section
+      id="contact"
+      class="contact"
+      style="padding: 6rem 2rem; background: white; text-align: center"
+    >
+      <div class="section-header fade-in">
+        <h2 class="section-title">Hubungi Kami</h2>
+        <p class="section-subtitle">
+          Kami siap membantu Anda dengan pertanyaan atau pesanan
+        </p>
+      </div>
+
+      <div
+        style="
+          max-width: 800px;
+          margin: 0 auto;
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 2rem;
+        "
+      >
+        <div
+          class="fade-in"
+          style="
+            padding: 2rem;
+            background: var(--background-color);
+            border-radius: 15px;
+          "
+        >
+          <i
+            class="fas fa-envelope"
+            style="
+              font-size: 2rem;
+              color: var(--primary-color);
+              margin-bottom: 1rem;
+            "
+          ></i>
+          <h3 style="margin-bottom: 1rem">Email</h3>
+          <p>info@luziahijab.com</p>
+        </div>
+        <div
+          class="fade-in"
+          style="
+            padding: 2rem;
+            background: var(--background-color);
+            border-radius: 15px;
+          "
+        >
+          <i
+            class="fas fa-phone"
+            style="
+              font-size: 2rem;
+              color: var(--primary-color);
+              margin-bottom: 1rem;
+            "
+          ></i>
+          <h3 style="margin-bottom: 1rem">Telepon</h3>
+          <p>0812-3456-7890</p>
+        </div>
+        <div
+          class="fade-in"
+          style="
+            padding: 2rem;
+            background: var(--background-color);
+            border-radius: 15px;
+          "
+        >
+          <i
+            class="fab fa-instagram"
+            style="
+              font-size: 2rem;
+              color: var(--primary-color);
+              margin-bottom: 1rem;
+            "
+          ></i>
+          <h3 style="margin-bottom: 1rem">Instagram</h3>
+          <p>@luzia_hijab</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Luzia Hijab</h3>
+          <p>
+            Toko hijab online terpercaya dengan koleksi terlengkap dan kualitas
+            terbaik untuk gaya hijab modern Anda.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>Kategori Produk</h3>
+          <ul>
+            <li>
+              <a href="#products">Hijab Segi Empat</a>
+            </li>
+            <li><a href="#products">Hijab Pashmina</a></li>
+            <li><a href="#products">Hijab Instan</a></li>
+            <li><a href="#products">Hijab Sport</a></li>
+            <li><a href="#products">Aksesoris Hijab</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Informasi</h3>
+          <ul>
+            <li><a href="#">Tentang Kami</a></li>
+            <li><a href="#">Cara Pemesanan</a></li>
+            <li><a href="#">Metode Pembayaran</a></li>
+            <li><a href="#">Ongkos Kirim</a></li>
+            <li><a href="#">Kebijakan Privasi</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Customer Service</h3>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Bantuan</a></li>
+            <li><a href="#">Retur & Tukar</a></li>
+            <li><a href="#">Lacak Pesanan</a></li>
+            <li><a href="#">Hubungi Kami</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; 2024 Luzia Hijab. All rights reserved. Designed with ❤️ for
+          modern hijabi
+        </p>
+      </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+      <div class="cart-header">
+        <h3>Keranjang Belanja</h3>
+        <button class="cart-close" id="cart-close">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="cart-body" id="cart-body">
+        <p style="text-align: center; color: #666; padding: 2rem">
+          Keranjang belanja Anda kosong
+        </p>
+      </div>
+      <div class="cart-total" id="cart-total" style="display: none">
+        <div class="total-row">
+          <span>Subtotal:</span>
+          <span id="subtotal">Rp 0</span>
+        </div>
+        <div class="total-row">
+          <span>Ongkir:</span>
+          <span>Rp 15.000</span>
+        </div>
+        <div class="total-row total-final">
+          <span>Total:</span>
+          <span id="total">Rp 15.000</span>
+        </div>
+        <button class="btn btn-primary" style="width: 100%; margin-top: 1rem">
+          <i class="fas fa-credit-card"></i>
+          Checkout
+        </button>
+      </div>
+    </div>
+
+    <!-- Product Quick View Modal -->
+    <div class="modal" id="quick-view-modal">
+      <div class="modal-content">
+        <button class="modal-close" id="modal-close">
+          <i class="fas fa-times"></i>
+        </button>
+        <div id="modal-body">
+          <!-- Quick view content will be loaded here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scroll-top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
